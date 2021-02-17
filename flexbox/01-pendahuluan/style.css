@@ -1,0 +1,84 @@
+/* Tanpa Flex */
+/* .container {
+	width: 600px;
+	border: 5px solid #333;
+	margin: 30px auto;
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+.container::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.container div {
+	width: 120px;
+	height: 120px;
+	background-color: rgb(19, 133, 255);
+	float: left;
+} */
+
+/* Dengan Flex */
+.container {
+	width: 600px;
+	/* height: 400px; */
+	height: 150px;
+	border: 5px solid #333;
+	margin: 30px auto;
+	padding: 5px;
+	box-sizing: border-box;
+	display: flex;
+	/* flex-direction: column-reverse; */
+	/* flex-wrap: wrap; */
+	/* justify-content: center; */
+	/* align-items: baseline; */
+	/* align-items: stretch akan berpengaruh ketika kita tidak kasih height-nya */
+	/* align-content: hanya berlaku ketika content-nya lebih dari 1 baris */
+	/* align-content: center; */
+	/* align-items: flex-start; */
+}
+
+.container div {
+	/* width: 120px; */
+	/* untuk align-items: stretch */
+	/* height: 120px; */
+	background-color: rgb(19, 133, 255);
+	margin: 2px;
+	flex: 1;
+}
+
+
+/* untuk align-items: baseline */
+/* .container div.tiga {
+	font-size: 60px;
+}
+
+.container div.empat {
+	font-size: 100px;
+} */
+
+/* Order */
+/* nilai defaulnya = 0 */
+/* .satu {
+	order: 3;
+}
+
+.dua {
+	order: 4;
+}
+
+.tiga {
+	order: 2;
+}
+
+.empat {
+	order: 1;
+} */
+
+/* flex-grow shorthand-nya flex */
+.container div.dua {
+	flex: 3;
+	align-self: center;
+}
