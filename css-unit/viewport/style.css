@@ -1,0 +1,55 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	line-height: 1.8em;
+}
+
+header {
+	background-color: #ccc;
+	background-image: url(img/bg.jpg);
+	background-size: cover;
+	background-position: center;
+	/* kalo dikasih 100%, dia akan 100% terhadap elemen pembungkusnya, jika pembungkusnya tidak dikasih height, maka dia akan mengikuti tinggi dari kontennya */
+	height: 100vh;
+	display: flex;
+}
+
+h1 {
+	/* font-size: 4rem; */
+	/* 4vw = 4% dari lebar viewport-nya, jadi semakin lebar viewport-nya, ukuran font-nya semakin besar, semakin kecil lebar viewport-nya, ukuran font-nya semakin kecil */
+	/* jadi setiap font-nya, itu lebarnya/ukurannya hanya 4% dari total lebar viewport-nya */
+	/* font-size: 4vw; */
+	/* 4vmax di desktop = 4% dari lebar viewport-nya */
+	/* 4vmax di handphone = 4% dari tinggi viewport-nya */
+	font-size: 4vmax;
+	line-height: 1.2em;
+	color: white;
+	text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+	text-align: center;
+	margin: auto;
+}
+
+section {
+	margin: 30px auto;
+	width: 80%;
+}
+
+section .detail {
+	font-size: 1.4rem;
+	text-align: center;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	padding: 0.5em 0;
+	margin-bottom: 2em;
+	color: #333;
+}
+
+section p {
+	font-size: 1.2em;
+	margin-bottom: 1em;
+	text-indent: 1em;
+}

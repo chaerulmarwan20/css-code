@@ -1,0 +1,97 @@
+/* untuk rem */
+/* html {
+	font-size: 10px;
+} */
+/* sama dengan */
+/* :root {
+	font-size: 10px;
+} */
+
+body {
+	font-family: 'Roboto', sans-serif;
+	color: #333;
+	text-align: center;
+	background-color: #eee;
+	line-height: 1.6;
+	font-weight: 300;
+	min-height: 2000px;
+}
+
+.container {
+	width: 80%;
+	margin: auto;
+}
+
+.typography {
+	display: flex;
+}
+
+.typography .col {
+	flex: 1;
+	margin: 0 0.5em;
+	padding: 0 0.5em;
+}
+
+/* em */
+/* .typography {
+	font-size: 10px;
+}
+
+.col-em {
+	font-size: 2em;
+} */
+
+/* 2em = 2 kali ukuran font elemen parent-nya/pembungkus-nya */
+/* jika semua pembungkus-nya tidak memiliki font-size, maka akan menggunakan nilai default, yaitu 16px, jadi 2 * 16 = 32px */
+/* em akan terus nyaris ke elemen pembungkus-nya sampai menemukan font yang fix atau px, setelah ketemu font tersebut akan dijadikan acuannya */
+/* .col-em h2 {
+	font-size: 2em;
+} */
+
+/* 1.5em = 1 setengah kali ukuran font elemen parent-nya/pembungkus-nya */
+/* jika semua pembungkus-nya tidak memiliki font-size, maka akan menggunakan nilai default, yaitu 16px , jadi 1.5 * 16 = 24px*/
+/* em akan terus nyaris ke elemen pembungkus-nya sampai menemukan font yang fix atau px, setelah ketemu font tersebut akan dijadikan acuannya */
+/* .col-em p {
+	font-size: 1.5em;
+} */
+
+/* rem */
+/* rem akan mengacu ke tag html, jika tag html-nya tidak dikasih, maka akan menggunakan nilai default, yaitu 16px */
+/* tips: gunakan rem untuk font, kalo em kita gunakan untuk length(selain font-size) sebuah elemen, contoh: margin, padding, width, height, tapi perilaku-nya sedikit berbeda */
+/* .col-rem {
+	font-size: 10px;
+}
+
+.col-rem h2 {
+	font-size: 2rem;
+}
+
+.col-rem p {
+	font-size: 1.5rem;
+} */
+
+.btn {
+	display: inline-block;
+	background: #333;
+	font-weight: 700;
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	/* jika kita ngasih em untuk length(selain font-size), sekarang em-nya tidak lagi relatif terhadap ukuran font parent-nya, tapi relatif terhadap ukuran font elemen yang bersangkutan, kalo tidak ada baru dia naik ke atas atau nyari ke pembungkus-nya, jadi dia mencari di elemen yang bersangkutan terlebih dahulu, kalo kita simpennya di font size dia langsung otomatis nyari ke parent-nya atau pembungkus-nya */
+	padding: 1em 3em;
+	/* jika margin-nya mau relatif pakai em, jadi dia akan relatif terhadap ukuran font dari elemen yang bersangkutan ataupun pembungkusnya, kemudian dikalikan, contoh btn-lg di bawah font-size-nya 2em, maka akan dikali 1.5em(ukuran margin-nya) kemudian dikali lagi dengan ukuran font-nya, entah itu elemen yang bersangkutan ataupun pembungkusnya, jika font-nya tidak diatur, maka akan menggunakan nilai default, yaitu 16px */
+	/* jika margin-nya mau fix pakai rem, jadi dia tidak akan relatif terhadap ukuran font dari elemen yang bersangkutan ataupun pembungkusnya, tapi dia akan relatif terhadap ukuran font root-nya, jika font root-nya tidak diatur, maka akan menggunakan nilai default, yaitu 16px */
+	/* rem relatif terhadap ukuran font root-nya, jika font root-nya tidak diatur, maka akan menggunakan nilai default, yaitu 16px */
+	/* em */
+	/* margin: 0 1.5em; */
+	/* rem */
+	margin: 0 1.5rem;
+}
+
+.btn-sm {
+	font-size: 0.5em;
+}
+
+.btn-lg {
+	font-size: 2em;
+}
